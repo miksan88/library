@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -15,7 +16,7 @@ class CreateAuthorsTable extends Migration
         Schema::create('authors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->timestamp('dob');
+            $table->timestamp('dob')->nullable();
             $table->timestamps();
         });
     }
